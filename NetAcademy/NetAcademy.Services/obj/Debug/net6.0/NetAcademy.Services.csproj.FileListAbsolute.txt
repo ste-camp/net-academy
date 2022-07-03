@@ -1,0 +1,17 @@
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\bin\Debug\net6.0\NetAcademy.Services.deps.json
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\bin\Debug\net6.0\NetAcademy.Services.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\bin\Debug\net6.0\ref\NetAcademy.Services.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\bin\Debug\net6.0\NetAcademy.Services.pdb
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\bin\Debug\net6.0\NetAcademy.Domain.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\bin\Debug\net6.0\NetAcademy.Repositories.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\bin\Debug\net6.0\NetAcademy.Domain.pdb
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\bin\Debug\net6.0\NetAcademy.Repositories.pdb
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\obj\Debug\net6.0\NetAcademy.Services.csproj.AssemblyReference.cache
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\obj\Debug\net6.0\NetAcademy.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\obj\Debug\net6.0\NetAcademy.Services.AssemblyInfoInputs.cache
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\obj\Debug\net6.0\NetAcademy.Services.AssemblyInfo.cs
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\obj\Debug\net6.0\NetAcademy.Services.csproj.CoreCompileInputs.cache
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\obj\Debug\net6.0\NetAcademy.Services.csproj.CopyComplete
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\obj\Debug\net6.0\NetAcademy.Services.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\obj\Debug\net6.0\ref\NetAcademy.Services.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Services\obj\Debug\net6.0\NetAcademy.Services.pdb

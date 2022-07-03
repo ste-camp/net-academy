@@ -1,0 +1,15 @@
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\bin\Debug\net6.0\NetAcademy.Repositories.deps.json
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\bin\Debug\net6.0\NetAcademy.Repositories.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\bin\Debug\net6.0\ref\NetAcademy.Repositories.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\bin\Debug\net6.0\NetAcademy.Repositories.pdb
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\bin\Debug\net6.0\NetAcademy.Domain.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\bin\Debug\net6.0\NetAcademy.Domain.pdb
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\obj\Debug\net6.0\NetAcademy.Repositories.csproj.AssemblyReference.cache
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\obj\Debug\net6.0\NetAcademy.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\obj\Debug\net6.0\NetAcademy.Repositories.AssemblyInfoInputs.cache
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\obj\Debug\net6.0\NetAcademy.Repositories.AssemblyInfo.cs
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\obj\Debug\net6.0\NetAcademy.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\obj\Debug\net6.0\NetAcademy.Repositories.csproj.CopyComplete
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\obj\Debug\net6.0\NetAcademy.Repositories.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\obj\Debug\net6.0\ref\NetAcademy.Repositories.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Repositories\obj\Debug\net6.0\NetAcademy.Repositories.pdb

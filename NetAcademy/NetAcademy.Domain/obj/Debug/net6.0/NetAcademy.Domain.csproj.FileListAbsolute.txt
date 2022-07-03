@@ -1,0 +1,12 @@
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Domain\bin\Debug\net6.0\NetAcademy.Domain.deps.json
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Domain\bin\Debug\net6.0\NetAcademy.Domain.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Domain\bin\Debug\net6.0\ref\NetAcademy.Domain.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Domain\bin\Debug\net6.0\NetAcademy.Domain.pdb
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Domain\obj\Debug\net6.0\NetAcademy.Domain.csproj.AssemblyReference.cache
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Domain\obj\Debug\net6.0\NetAcademy.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Domain\obj\Debug\net6.0\NetAcademy.Domain.AssemblyInfoInputs.cache
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Domain\obj\Debug\net6.0\NetAcademy.Domain.AssemblyInfo.cs
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Domain\obj\Debug\net6.0\NetAcademy.Domain.csproj.CoreCompileInputs.cache
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Domain\obj\Debug\net6.0\NetAcademy.Domain.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Domain\obj\Debug\net6.0\ref\NetAcademy.Domain.dll
+C:\Users\StefanoCampanella\Progetti\net-academy\NetAcademy\NetAcademy.Domain\obj\Debug\net6.0\NetAcademy.Domain.pdb
