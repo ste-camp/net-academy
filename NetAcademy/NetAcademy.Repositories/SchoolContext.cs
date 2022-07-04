@@ -3,7 +3,7 @@ using NetAcademy.Repositories.SqlModels;
 
 namespace NetAcademy.Repositories;
 
-public class NetAcademyContext: DbContext
+public class SchoolContext: DbContext
 {
     private readonly string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=NetAcademy;Trusted_Connection=True;";//connection string di default se non viene passaa da altrove
 
@@ -13,13 +13,14 @@ public class NetAcademyContext: DbContext
     internal DbSet<Student> Students { get; set; }
     internal DbSet<Teacher> Teachers { get; set; }
     internal DbSet<Course> Courses { get; set; }
+    internal DbSet<Enrollment> Enrollments { get; set; }
 
-    public NetAcademyContext()
+    public SchoolContext()
     {
-        
+        Database.EnsureCreated();
     }
 
-    public NetAcademyContext(string connStr): this()
+    public SchoolContext(string connStr): this()
     {
         connectionString = connStr;
     }

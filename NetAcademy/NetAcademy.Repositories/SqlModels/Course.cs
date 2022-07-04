@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NetAcademy.Repositories.SqlModels;
 
 internal class Course
 {
-    public string CourseId { get; set; } = null!;
-    public string Name { get; set; } = null!;
-    public string Description { get; set; } = null!;
-    public DateTime StartTime { get; set; }
-    public DateTime EndTime { get; set; }
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public long Id { get; set; }
+    public string CourseName { get; set; } = null!;
+    public string CourseCategory { get; set; } = null!;
+    public DateTimeOffset CourseDate { get; set; }
+
+    public virtual ICollection<Enrollment> Enrollments { get; set; } = null!;
+    public virtual ICollection<Teacher> Teachers { get; set; } = null!;
 }

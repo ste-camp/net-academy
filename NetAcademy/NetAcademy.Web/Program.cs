@@ -1,29 +1,35 @@
 using Microsoft.EntityFrameworkCore;
 using NetAcademy.Domain;
 using NetAcademy.Repositories;
-using NetAcademy.Repository;
+using NetAcademy.Repository.Implementations;
+using NetAcademy.Repository.Interfaces;
 using NetAcademy.Services;
 using NLog;
 using NLog.Web;
 
 var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
 
-try{
+try
+{
     var builder = WebApplication.CreateBuilder(args);
 
     // Add services to the container.
 
     builder.Services.AddControllers();
-    
+
     builder.Logging.ClearProviders();
     builder.Host.UseNLog();
 
-    builder.Services.AddDbContext<NetAcademyContext>(options =>
+    builder.Services.AddDbContext<SchoolContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString(Constants.DB_CONNECTION_KEY)));
-    
-    builder.Services.AddScoped<IExampleRepository, ExampleRepository>();
 
-    builder.Services.AddScoped<ExampleService>();
+    builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+    builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+    builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
+
+    builder.Services.AddScoped<StudentService>();
+    builder.Services.AddScoped<CourseService>();
+    builder.Services.AddScoped<TeacherService>();
 
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
