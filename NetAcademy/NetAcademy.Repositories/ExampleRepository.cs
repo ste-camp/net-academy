@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using NetAcademy.Repositories;
+using NetAcademy.Repositories.SqlModels;
 
 namespace NetAcademy.Repository;
 
@@ -16,6 +17,9 @@ public class ExampleRepository: IExampleRepository
     
     public int GetSomething()
     {
+        context.Students.Add(new Student() {StudentId = "ABC", FirstName = "Giuseppe", LastName = "Campanella" });
+        context.SaveChanges();
+
         return 1;
     }
 }
