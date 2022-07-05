@@ -14,7 +14,6 @@ public class SchoolContext : DbContext
     internal DbSet<Teacher> Teachers { get; set; }
     internal DbSet<Course> Courses { get; set; }
     internal DbSet<StudentCourse> StudentsCourses { get; set; }
-    internal DbSet<ABC> ABCs{ get; set; }
 
     public SchoolContext() { }
 
