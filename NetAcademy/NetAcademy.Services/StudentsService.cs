@@ -4,11 +4,11 @@ using NetAcademy.Repository.Interfaces;
 
 namespace NetAcademy.Services;
 
-public class StudentService
+public class StudentsService
 {
-    private IStudentRepository repository;
+    private IStudentsRepository repository;
 
-    public StudentService(IStudentRepository repo)
+    public StudentsService(IStudentsRepository repo)
     {
         repository = repo;
     }

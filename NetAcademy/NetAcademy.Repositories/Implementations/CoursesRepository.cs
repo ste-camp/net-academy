@@ -8,12 +8,12 @@ using NetAcademy.Repository.Interfaces;
 
 namespace NetAcademy.Repository.Implementations;
 
-public class CourseRepository : ICourseRepository
+public class CoursesRepository : ICoursesRepository
 {
-    private ILogger<CourseRepository> logger;
+    private ILogger<CoursesRepository> logger;
     private SchoolContext context;
 
-    public CourseRepository(ILogger<CourseRepository> l, SchoolContext c)
+    public CoursesRepository(ILogger<CoursesRepository> l, SchoolContext c)
     {
         logger = l;
         context = c;
@@ -49,12 +49,14 @@ public class CourseRepository : ICourseRepository
         course.CourseName = dto.CourseName;
         course.CourseCategory = dto.CourseCategory;
         course.CourseDate = dto.CourseDate;
+        course.TeacherId = dto.TeacherId;
+
         await context.SaveChangesAsync();
     }
 
     public List<string> GetAllCoursesCategory()
     {
-        return context.Courses.Select(x => x.CourseCategory).ToList();
+        return context.Courses.Select(x => x.CourseCategory).Distinct().ToList();
     }
 
     public List<CourseDto> GetCoursesByCategory(string category)

@@ -2,7 +2,7 @@
 
 namespace NetAcademy.Repository.Interfaces;
 
-public interface IStudentRepository
+public interface IStudentsRepository
 {
     public Task EnrollStudentToCourseAsync(long id, long courseId);
     public Task CancelStudentFromCourseAsync(long id, long courseId);

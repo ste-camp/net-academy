@@ -3,11 +3,11 @@ using NetAcademy.Repository.Interfaces;
 
 namespace NetAcademy.Services;
 
-public class CourseService
+public class CoursesService
 {
-    private ICourseRepository repository;
+    private ICoursesRepository repository;
 
-    public CourseService(ICourseRepository repo)
+    public CoursesService(ICoursesRepository repo)
     {
         repository = repo;
     }
@@ -22,9 +22,16 @@ public class CourseService
         await repository.UpdateCourseAsync(id, dto);
     }
 
-    public async Task<List<CourseDto>> GetAllCoursesAsync()
+    public async Task<List<CourseDto>> GetAllCoursesAsync(string? category)
     {
-        return await repository.GetAllCoursesAsync();
+        if (category is null)
+        {
+            return await repository.GetAllCoursesAsync();
+        }
+        else
+        {
+            return repository.GetCoursesByCategory(category);
+        }
     }
 
     public async Task<CourseDto?> GetCourseAsync(long id)
@@ -40,10 +47,5 @@ public class CourseService
     public List<string> GetAllCoursesCategory()
     {
         return repository.GetAllCoursesCategory();
-    }
-
-    public List<CourseDto> GetCoursesByCategory(string category)
-    {
-        return repository.GetCoursesByCategory(category);
     }
 }

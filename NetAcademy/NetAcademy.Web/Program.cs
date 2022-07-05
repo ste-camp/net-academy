@@ -23,13 +23,13 @@ try
     builder.Services.AddDbContext<SchoolContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString(Constants.DB_CONNECTION_KEY)));
 
-    builder.Services.AddScoped<IStudentRepository, StudentRepository>();
-    builder.Services.AddScoped<ICourseRepository, CourseRepository>();
-    builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
+    builder.Services.AddScoped<IStudentsRepository, StudentsRepository>();
+    builder.Services.AddScoped<ICoursesRepository, CoursesRepository>();
+    builder.Services.AddScoped<ITeachersRepository, TeachersRepository>();
 
-    builder.Services.AddScoped<StudentService>();
-    builder.Services.AddScoped<CourseService>();
-    builder.Services.AddScoped<TeacherService>();
+    builder.Services.AddScoped<StudentsService>();
+    builder.Services.AddScoped<CoursesService>();
+    builder.Services.AddScoped<TeachersService>();
 
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();

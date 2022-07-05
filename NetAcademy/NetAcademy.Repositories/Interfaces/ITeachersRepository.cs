@@ -2,7 +2,7 @@
 
 namespace NetAcademy.Repository.Interfaces;
 
-public interface ITeacherRepository
+public interface ITeachersRepository
 {
     public Task CreateNewTeacherAsync(TeacherDto dto);
     public Task DeleteTeacherAsync(long id);

@@ -6,12 +6,12 @@ namespace NetAcademy.Web.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class StudentController : ControllerBase
+public class StudentsController : ControllerBase
 {
-    private ILogger<StudentController> logger;
-    private StudentService service;
+    private ILogger<StudentsController> logger;
+    private StudentsService service;
 
-    public StudentController(ILogger<StudentController> log, StudentService s)
+    public StudentsController(ILogger<StudentsController> log, StudentsService s)
     {
         logger = log;
         service = s;

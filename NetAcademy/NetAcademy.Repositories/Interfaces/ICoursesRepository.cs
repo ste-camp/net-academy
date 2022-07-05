@@ -2,7 +2,7 @@
 
 namespace NetAcademy.Repository.Interfaces;
 
-public interface ICourseRepository
+public interface ICoursesRepository
 {
     public Task CreateNewCourseAsync(CourseDto course);
     public Task DeleteCourseAsync(long id);

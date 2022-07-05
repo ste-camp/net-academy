@@ -8,12 +8,12 @@ using NetAcademy.Repository.Interfaces;
 
 namespace NetAcademy.Repository.Implementations;
 
-public class TeacherRepository : ITeacherRepository
+public class TeachersRepository : ITeachersRepository
 {
-    private ILogger<TeacherRepository> logger;
+    private ILogger<TeachersRepository> logger;
     private SchoolContext context;
 
-    public TeacherRepository(ILogger<TeacherRepository> l, SchoolContext c)
+    public TeachersRepository(ILogger<TeachersRepository> l, SchoolContext c)
     {
         logger = l;
         context = c;

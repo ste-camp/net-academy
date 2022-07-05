@@ -6,12 +6,12 @@ namespace NetAcademy.Web.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class CourseController : ControllerBase
+public class CoursesController : ControllerBase
 {
-    private ILogger<CourseController> logger;
-    private CourseService service;
+    private ILogger<CoursesController> logger;
+    private CoursesService service;
 
-    public CourseController(ILogger<CourseController> log, CourseService s)
+    public CoursesController(ILogger<CoursesController> log, CoursesService s)
     {
         logger = log;
         service = s;
@@ -42,20 +42,20 @@ public class CourseController : ControllerBase
     }
 
     [HttpGet("")]
-    public async Task<List<CourseDto>> GetAllCoursesAsync()
+    public async Task<List<CourseDto>> GetAllCoursesAsync(string? category)
     {
-        return await service.GetAllCoursesAsync();
+        return await service.GetAllCoursesAsync(category);
     }
 
-    [HttpGet("/courseCategory")]
+    [HttpGet("/categories")]
     public List<string> GetAllCoursesCategory()
     {
         return service.GetAllCoursesCategory();
     }
 
-    [HttpGet("/courseByCategory")]
-    public List<CourseDto> GetCoursesByCategory(string category)
+    [HttpGet("/summaries")]
+    public List<string> GetAllCoursesSummary()
     {
-        return service.GetCoursesByCategory(category);
+        throw new NotImplementedException();
     }
 }
