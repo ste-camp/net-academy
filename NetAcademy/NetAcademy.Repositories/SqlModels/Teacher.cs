@@ -13,5 +13,5 @@ internal class Teacher
     public string TeacherSurname { get; set; } = null!;
     public string TeacherEmail { get; set; } = null!;
 
-    public virtual ICollection<Course> Courses { get; set; }
+    public virtual ICollection<Course>? Courses { get; set; }
 }
