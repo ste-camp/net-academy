@@ -40,14 +40,33 @@ public class TeacherRepository : ITeacherRepository
     public async Task<TeacherDto> GetTeacherAsync(long id)
     {
         Teacher teacher = await context.Teachers.FindAsync(id);
-        return teacher.ToDto();        
+        return teacher.ToDto();
     }
 
     public async Task UpdateTeacherAsync(long id, TeacherDto dto)
     {
         Teacher teacher = await context.Teachers.FindAsync(id);
-        teacher = dto.ToSqlModel();
+        teacher.TeacherName = dto.TeacherName;
+        teacher.TeacherSurname = dto.TeacherSurname;
+        teacher.TeacherEmail = dto.TeacherEmail;
+
         await context.SaveChangesAsync();
-        throw new NotImplementedException();
+    }
+
+    public List<TeacherInfoDto> GetTeachersAndCourses()
+    {
+        return context
+            .Teachers
+            .Include(t => t.Courses)
+            .Select(x =>
+            new TeacherInfoDto()
+            {
+                Courses = x.Courses.Select(c => c.ToDto()).ToList(),
+                TeacherEmail = x.TeacherEmail,
+                TeacherName = x.TeacherName,
+                TeacherSurname = x.TeacherSurname,
+                TeacherId = x.Id
+            })
+            .ToList();
     }
 }

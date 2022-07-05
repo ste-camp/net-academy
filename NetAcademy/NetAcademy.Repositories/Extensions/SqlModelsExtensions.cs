@@ -14,6 +14,7 @@ namespace NetAcademy.Repositories.Extensions
                 CourseCategory = x.CourseCategory,
                 CourseName = x.CourseName,
                 CourseDate = x.CourseDate,
+                TeacherId = x.TeacherId
             };
         }
 
@@ -49,7 +50,7 @@ namespace NetAcademy.Repositories.Extensions
                 TeacherName = x.TeacherName,
                 TeacherSurname = x.TeacherSurname,
             };
-        }      
+        }
 
         public static StudentDto? ToDto(this Student x)
         {
@@ -63,18 +64,6 @@ namespace NetAcademy.Repositories.Extensions
             };
         }
 
-        public static EnrollmentDto? ToDto(this Enrollment x)
-        {
-            if (x == null) return null;
-            return new EnrollmentDto()
-            {
-                EnrollmentId = x.Id,
-                CourseName = x.Course.CourseName,
-                CourseCategory = x.Course.CourseCategory,
-                //CourseId = x.
-            };
-        }
-
         public static CourseDto? ToDto(this Course x)
         {
             if (x == null) return null;
@@ -84,6 +73,17 @@ namespace NetAcademy.Repositories.Extensions
                 CourseCategory = x.CourseCategory,
                 CourseName = x.CourseName,
                 CourseDate = x.CourseDate,
+                TeacherId = x.TeacherId
+            };
+        }
+
+        public static StudentCourseDto? ToDto(this StudentCourse x)
+        {
+            if (x == null) return null;
+            return new StudentCourseDto()
+            {
+                StudentId = x.StudentId,
+                CourseId = x.CourseId,
             };
         }
     }

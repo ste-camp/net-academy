@@ -6,7 +6,7 @@ namespace NetAcademy.Web.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class TeacherController: ControllerBase
+public class TeacherController : ControllerBase
 {
     private ILogger<TeacherController> logger;
     private TeacherService service;
@@ -17,22 +17,10 @@ public class TeacherController: ControllerBase
         service = s;
     }
 
-    [HttpGet("")]
-    public List<TeacherDto> GetAllTeachers()
-    {
-        return service.GetAllTeachers();
-    }
-
     [HttpGet("{id}")]
     public async Task<TeacherDto?> GetTeacherAsync(long id)
     {
         return await service.GetTeacherAsync(id);
-    }
-
-    [HttpPost("")]
-    public async Task CreateNewTeacherAsync(TeacherDto dto)
-    {
-        await service.CreateNewTeacherAsync(dto);
     }
 
     [HttpPut("{id}")]
@@ -45,5 +33,23 @@ public class TeacherController: ControllerBase
     public async Task DeleteTeacherAsync(long id)
     {
         await service.DeleteTeacherAsync(id);
+    }
+
+    [HttpGet("")]
+    public List<TeacherDto> GetAllTeachers()
+    {
+        return service.GetAllTeachers();
+    }
+
+    [HttpPost("")]
+    public async Task CreateNewTeacherAsync(TeacherDto dto)
+    {
+        await service.CreateNewTeacherAsync(dto);
+    }
+
+    [HttpGet("course")]
+    public List<TeacherInfoDto> GetTeachersAndCourses()
+    {
+        return service.GetTeachersAndCourses();
     }
 }

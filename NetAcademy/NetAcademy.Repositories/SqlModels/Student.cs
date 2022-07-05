@@ -11,5 +11,6 @@ internal class Student
     public string StudentName { get; set; } = null!;
     public string StudentSurname { get; set; } = null!;
     public string StudentEmail { get; set; } = null!;
-    public virtual ICollection<Enrollment>? Enrollments { get; set; }
+
+    public virtual ICollection<StudentCourse>? StudentCourses { get; set; }
 }

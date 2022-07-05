@@ -36,4 +36,14 @@ public class CourseService
     {
         await repository.DeleteCourseAsync(id);
     }
+
+    public List<string> GetAllCoursesCategory()
+    {
+        return repository.GetAllCoursesCategory();
+    }
+
+    public List<CourseDto> GetCoursesByCategory(string category)
+    {
+        return repository.GetCoursesByCategory(category);
+    }
 }

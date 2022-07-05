@@ -2,5 +2,5 @@
 
 public class StudentInfoDto : StudentDto
 {
-    public List<EnrollmentDto>? Enrollments { get; set; } = null!;
+    public List<StudentCourseDto>? StudentCourses { get; set; } = null!;
 }

@@ -17,6 +17,30 @@ public class StudentController : ControllerBase
         service = s;
     }
 
+    [HttpGet("{id}")]
+    public async Task<StudentDto?> GetStudentAsync(long id)
+    {
+        return await service.GetStudentAsync(id);
+    }
+
+    [HttpPut("{id}")]
+    public async Task UpdateStudentAsync(long id, [FromBody] StudentDto dto)
+    {
+        await service.UpdateStudentAsync(id, dto);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task DeleteStudentAsync(long id)
+    {
+        await service.DeleteStudentAsync(id);
+    }
+
+    [HttpDelete("{id}/disenroll/")]
+    public async Task CancelStudentFromCourseAsync(long id, long courseId)
+    {
+        await service.CancelStudentFromCourseAsync(id, courseId);
+    }
+
     [HttpPost("{id}/enroll")]
     public async Task EnrollStudentToCourseAsync(long id, long courseId)
     {
@@ -35,27 +59,9 @@ public class StudentController : ControllerBase
         return await service.GetAllStudentsAsync();
     }
 
-    [HttpGet("{id}")]
-    public async Task<StudentDto?> GetStudentAsync(long id)
-    {
-        return await service.GetStudentAsync(id);
-    }
-
     [HttpPost("")]
     public async Task CreateNewStudentAsync(StudentDto dto)
     {
         await service.CreateNewStudentAsync(dto);
-    }
-
-    [HttpPut("{id}")]
-    public async Task UpdateStudentAsync(long id, [FromBody] StudentDto dto)
-    {
-        await service.UpdateStudentAsync(id, dto);
-    }
-
-    [HttpDelete("{id}")]
-    public async Task DeleteStudentAsync(long id)
-    {
-        await service.DeleteStudentAsync(id);
     }
 }

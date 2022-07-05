@@ -51,4 +51,14 @@ public class CourseRepository : ICourseRepository
         course.CourseDate = dto.CourseDate;
         await context.SaveChangesAsync();
     }
+
+    public List<string> GetAllCoursesCategory()
+    {
+        return context.Courses.Select(x => x.CourseCategory).ToList();
+    }
+
+    public List<CourseDto> GetCoursesByCategory(string category)
+    {
+        return context.Courses.Where(x => x.CourseCategory == category).Select(x => x.ToDto()).ToList();
+    }
 }

@@ -7,7 +7,7 @@ namespace NetAcademy.Services;
 public class StudentService
 {
     private IStudentRepository repository;
-    
+
     public StudentService(IStudentRepository repo)
     {
         repository = repo;
@@ -46,5 +46,10 @@ public class StudentService
     public async Task DeleteStudentAsync(long id)
     {
         await repository.DeleteStudentAsync(id);
+    }
+
+    public async Task CancelStudentFromCourseAsync(long id, long courseId)
+    {
+        await repository.CancelStudentFromCourseAsync(id, courseId);
     }
 }

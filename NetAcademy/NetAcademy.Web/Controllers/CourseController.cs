@@ -17,18 +17,6 @@ public class CourseController : ControllerBase
         service = s;
     }
 
-    [HttpPost("")]
-    public async Task CreateNewCourseAsync(CourseDto dto)
-    {
-        await service.CreateNewCourseAsync(dto);
-    }
-
-    [HttpGet("")]
-    public async Task<List<CourseDto>> GetAllCoursesAsync()
-    {
-        return await service.GetAllCoursesAsync();
-    }
-
     [HttpGet("{id}")]
     public async Task<CourseDto?> GetCourseAsync(long id)
     {
@@ -45,5 +33,29 @@ public class CourseController : ControllerBase
     public async Task DeleteCourseAsync(long id)
     {
         await service.DeleteCourseAsync(id);
+    }
+
+    [HttpPost("")]
+    public async Task CreateNewCourseAsync(CourseDto dto)
+    {
+        await service.CreateNewCourseAsync(dto);
+    }
+
+    [HttpGet("")]
+    public async Task<List<CourseDto>> GetAllCoursesAsync()
+    {
+        return await service.GetAllCoursesAsync();
+    }
+
+    [HttpGet("/courseCategory")]
+    public List<string> GetAllCoursesCategory()
+    {
+        return service.GetAllCoursesCategory();
+    }
+
+    [HttpGet("/courseByCategory")]
+    public List<CourseDto> GetCoursesByCategory(string category)
+    {
+        return service.GetCoursesByCategory(category);
     }
 }

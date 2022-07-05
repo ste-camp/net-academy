@@ -7,7 +7,7 @@ namespace NetAcademy.Services;
 public class TeacherService
 {
     private ITeacherRepository repository;
-    
+
     public TeacherService(ITeacherRepository repo)
     {
         repository = repo;
@@ -36,6 +36,11 @@ public class TeacherService
     public async Task DeleteTeacherAsync(long id)
     {
         await repository.DeleteTeacherAsync(id);
+    }
+
+    public List<TeacherInfoDto> GetTeachersAndCourses()
+    {
+        return repository.GetTeachersAndCourses();
     }
 
 }
