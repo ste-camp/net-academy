@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NetAcademy.Repositories.SqlModels;
 
-internal class Course
+internal class Class
 {
     public string CourseId { get; set; } = null!;
     public string Name { get; set; } = null!;

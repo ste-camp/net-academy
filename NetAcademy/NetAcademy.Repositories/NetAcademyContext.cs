@@ -10,10 +10,6 @@ public class NetAcademyContext: DbContext
     //tabella di esempio:
     //internal DbSet<GenerationUnit> GenerationUnits { get; set; }
 
-    internal DbSet<Student> Students { get; set; }
-    internal DbSet<Teacher> Teachers { get; set; }
-    internal DbSet<Course> Courses { get; set; }
-
     public NetAcademyContext()
     {
         
