@@ -84,6 +84,32 @@ namespace NetAcademy.Repositories.Extensions
             {
                 StudentId = x.StudentId,
                 CourseId = x.CourseId,
+                Course = x.Course.ToDto()
+            };
+        }
+
+        public static StudentCourseInfoDto? ToInfoDto(this StudentCourse x)
+        {
+            if (x == null) return null;
+            return new StudentCourseInfoDto()
+            {
+                StudentId = x.StudentId,
+                CourseId = x.CourseId,
+                Course = x.Course.ToInfoDto()
+            };
+        }
+
+        public static CourseInfoDto? ToInfoDto(this Course x)
+        {
+            if (x == null) return null;
+            return new CourseInfoDto()
+            {
+                CourseId = x.Id,
+                CourseCategory = x.CourseCategory,
+                CourseName = x.CourseName,
+                CourseDate = x.CourseDate,
+                TeacherId = x.TeacherId,
+                Teacher = x.Teacher.ToDto()
             };
         }
     }

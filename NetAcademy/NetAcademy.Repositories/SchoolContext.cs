@@ -26,7 +26,7 @@ public class SchoolContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer(connectionString/*, b => b.MigrationsAssembly("NetAcademy.Web")*/);
+            optionsBuilder.UseSqlServer(connectionString);
         }
     }
 

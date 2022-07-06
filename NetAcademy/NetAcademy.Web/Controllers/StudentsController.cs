@@ -47,12 +47,6 @@ public class StudentsController : ControllerBase
         await service.EnrollStudentToCourseAsync(id, courseId);
     }
 
-    [HttpGet("{id}/info")]
-    public async Task<StudentInfoDto> GetStudentInfoAsync(long id)
-    {
-        return await service.GetStudentInfoAsync(id);
-    }
-
     [HttpGet("")]
     public async Task<List<StudentDto>> GetAllStudentsAsync()
     {

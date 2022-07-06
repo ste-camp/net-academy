@@ -18,11 +18,6 @@ public class StudentsService
         await repository.EnrollStudentToCourseAsync(id, courseId);
     }
 
-    public async Task<StudentInfoDto> GetStudentInfoAsync(long id)
-    {
-        return await repository.GetStudentInfoAsync(id);
-    }
-
     public async Task CreateNewStudentAsync(StudentDto dto)
     {
         await repository.CreateNewStudentAsync(dto);
@@ -51,5 +46,17 @@ public class StudentsService
     public async Task CancelStudentFromCourseAsync(long id, long courseId)
     {
         await repository.CancelStudentFromCourseAsync(id, courseId);
+    }
+
+    // esercizi in più
+
+    public async Task<StudentInfoDto> GetStudentCourseAsync(long id)
+    {
+        return await repository.GetStudentCourseAsync(id);
+    }
+
+    public async Task<StudentInfoDto> GetStudentCoursesAndTeachersAsync(long id)
+    {
+        return await repository.GetStudentCoursesAndTeachersAsync(id);
     }
 }
