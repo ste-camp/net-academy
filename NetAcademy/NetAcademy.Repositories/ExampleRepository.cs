@@ -1,15 +1,14 @@
 ﻿using Microsoft.Extensions.Logging;
 using NetAcademy.Repositories;
-using NetAcademy.Repositories.SqlModels;
 
 namespace NetAcademy.Repository;
 
 public class ExampleRepository: IExampleRepository
 {
     private ILogger<ExampleRepository> logger;
-    private NetAcademyContext context;
+    private SchoolContext context;
 
-    public ExampleRepository(ILogger<ExampleRepository> l, NetAcademyContext c)
+    public ExampleRepository(ILogger<ExampleRepository> l, SchoolContext c)
     {
         logger = l;
         context = c;
@@ -17,9 +16,6 @@ public class ExampleRepository: IExampleRepository
     
     public int GetSomething()
     {
-        context.Students.Add(new Student() {StudentId = "ABC", FirstName = "Giuseppe", LastName = "Campanella" });
-        context.SaveChanges();
-
         return 1;
     }
 }

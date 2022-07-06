@@ -3,19 +3,19 @@ using NetAcademy.Repositories.SqlModels;
 
 namespace NetAcademy.Repositories;
 
-public class NetAcademyContext: DbContext
+public class SchoolContext: DbContext
 {
     private readonly string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=NetAcademy;Trusted_Connection=True;";//connection string di default se non viene passaa da altrove
 
     //tabella di esempio:
     //internal DbSet<GenerationUnit> GenerationUnits { get; set; }
 
-    public NetAcademyContext()
+    public SchoolContext()
     {
         
     }
 
-    public NetAcademyContext(string connStr): this()
+    public SchoolContext(string connStr): this()
     {
         connectionString = connStr;
     }

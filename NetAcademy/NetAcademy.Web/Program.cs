@@ -18,7 +18,7 @@ try{
     builder.Logging.ClearProviders();
     builder.Host.UseNLog();
 
-    builder.Services.AddDbContext<NetAcademyContext>(options =>
+    builder.Services.AddDbContext<SchoolContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString(Constants.DB_CONNECTION_KEY)));
     
     builder.Services.AddScoped<IExampleRepository, ExampleRepository>();
