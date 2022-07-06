@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NetAcademy.Repositories\NetAcademy.Repositories.csproj" />
+    <ProjectReference Include="..\NetAcademy.Services\NetAcademy.Services.csproj" />
   </ItemGroup>
 
 </Project>

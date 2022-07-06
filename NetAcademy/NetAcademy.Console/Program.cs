@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NetAcademy.Domain;
 using NetAcademy.Repositories;
+using NetAcademy.Services;
 using System.Text.Json;
 
 class Program
@@ -18,7 +19,8 @@ class Program
 
 
         var service = collection.BuildServiceProvider();
-
+        var _service = service.GetRequiredService<ExampleService>();
+        _service.DoSomething();
         //string json = JsonSerializer.Serialize(res, new JsonSerializerOptions() { WriteIndented = true });
         //Console.WriteLine(json);
 
