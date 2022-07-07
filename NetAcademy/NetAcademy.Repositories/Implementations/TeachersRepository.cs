@@ -47,4 +47,22 @@ public class TeachersRepository : ITeachersRepository
         await context.Teachers.AddAsync(dto.ToSqlModel());
         await context.SaveChangesAsync();
     }
+
+    public async Task DeleteTeacherAsync(long id)
+    {
+
+    }
+
+    public List<TeacherDto> GetAllTeachers()
+    {
+    }
+
+    public async Task<TeacherDto> GetTeacherAsync(long id)
+    {
+    }
+
+    public async Task UpdateTeacherAsync(long id, TeacherDto dto)
+    {
+    }
+
 }
