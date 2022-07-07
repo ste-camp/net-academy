@@ -17,4 +17,24 @@ public class TeachersService
     {
         await repository.CreateNewTeacherAsync(dto);
     }
+
+    public async Task UpdateTeacherAsync(long id, TeacherDto dto)
+    {
+        await repository.UpdateTeacherAsync(id, dto);
+    }
+
+    public async Task DeleteTeacherAsync(long id)
+    {
+        await repository.DeleteTeacherAsync(id);
+    }
+
+    public List<TeacherDto> GetAllTeachers()
+    {
+        return repository.GetAllTeachers();
+    }
+
+    public async Task<TeacherDto?> GetTeacherAsync(long id)
+    {
+        return await repository.GetTeacherAsync(id);
+    }
 }
