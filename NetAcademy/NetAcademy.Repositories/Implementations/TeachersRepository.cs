@@ -58,14 +58,26 @@ public class TeachersRepository : ITeachersRepository
 
     public List<TeacherDto> GetAllTeachers()
     {
+        return context.Teachers.Select(x => x.ToDto()).ToList();
     }
 
     public async Task<TeacherDto> GetTeacherAsync(long id)
     {
+        Teacher teacher = await context.Teachers.FindAsync(id);
+        return teacher.ToDto();
     }
 
     public async Task UpdateTeacherAsync(long id, TeacherDto dto)
     {
+        Teacher teacher = await context.Teachers.FindAsync(id);
+        if (teacher != null)
+        {
+            teacher.TeacherName = dto.TeacherName;
+            teacher.TeacherSurname = dto.TeacherSurname;
+            teacher.TeacherEmail = dto.TeacherEmail;
+
+            await context.SaveChangesAsync();
+        }
     }
 
 }
