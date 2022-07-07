@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NetAcademy.Domain;
 using NetAcademy.Repositories;
+using NetAcademy.Repository;
 using NetAcademy.Services;
 using System.Text.Json;
 
@@ -15,7 +16,9 @@ class Program
         collection
             .AddLogging()
             .AddDbContext<SchoolContext>(options =>
-                options.UseSqlServer("Server=(localdb)\\\\MSSQLLocalDB;Database=NetAcademy;Trusted_Connection=True;"));
+                options.UseSqlServer("Server=(localdb)\\\\MSSQLLocalDB;Database=NetAcademy;Trusted_Connection=True;"))
+            .AddScoped<IExampleRepository, ExampleRepository>()
+            .AddScoped<ExampleService>();
 
 
         var service = collection.BuildServiceProvider();
