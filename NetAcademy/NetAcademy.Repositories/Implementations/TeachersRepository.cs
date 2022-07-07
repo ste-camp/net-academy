@@ -5,6 +5,7 @@ using NetAcademy.Domain;
 using NetAcademy.Domain.Models.DTOs;
 using NetAcademy.Repositories.Extensions;
 using NetAcademy.Repositories.Interfaces;
+using NetAcademy.Repositories.SqlModels;
 
 namespace NetAcademy.Repositories.Implementations;
 
@@ -50,7 +51,9 @@ public class TeachersRepository : ITeachersRepository
 
     public async Task DeleteTeacherAsync(long id)
     {
-
+        Teacher teacher = await context.Teachers.FindAsync(id);
+        context.Teachers.Remove(teacher);
+        await context.SaveChangesAsync();
     }
 
     public List<TeacherDto> GetAllTeachers()
