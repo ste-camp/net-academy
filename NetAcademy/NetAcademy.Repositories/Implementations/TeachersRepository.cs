@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using NetAcademy.Domain;
 using NetAcademy.Domain.Models.DTOs;
@@ -78,6 +79,23 @@ public class TeachersRepository : ITeachersRepository
 
             await context.SaveChangesAsync();
         }
+    }
+
+    public List<TeacherInfoDto> GetTeachersAndCourses()
+    {
+        return context
+            .Teachers
+            .Include(t => t.Courses)
+            .Select(x => 
+            new TeacherInfoDto() 
+            {
+                TeacherEmail = x.TeacherEmail,
+                TeacherName = x.TeacherName,
+                TeacherSurname = x.TeacherSurname,
+                TeacherId = x.Id,
+                Courses = x.Courses.Select(c => c.ToDto()).ToList(),
+            })
+            .ToList();
     }
 
 }

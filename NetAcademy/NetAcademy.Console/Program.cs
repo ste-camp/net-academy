@@ -31,9 +31,10 @@ class Program
 
         TeacherDto dto = new() { TeacherName = "Marcello", TeacherSurname = "Rossi", TeacherEmail = "mar.rossi@email.com" };
 
-        await _service.CreateNewTeacherAsync(dto);
-        //string json = JsonSerializer.Serialize(res, new JsonSerializerOptions() { WriteIndented = true });
-        //Console.WriteLine(json);
+        //await _service.CreateNewTeacherAsync(dto);
+        var res = _service.GetAllTeachers();
+        string json = JsonSerializer.Serialize(res, new JsonSerializerOptions() { WriteIndented = true });
+        Console.WriteLine(json);
 
     }
 }
