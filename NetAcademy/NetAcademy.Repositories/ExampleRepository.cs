@@ -3,7 +3,7 @@ using NetAcademy.Repositories;
 
 namespace NetAcademy.Repository;
 
-public class ExampleRepository: IExampleRepository
+public class ExampleRepository : IExampleRepository
 {
     private ILogger<ExampleRepository> logger;
     private SchoolContext context;
@@ -13,7 +13,7 @@ public class ExampleRepository: IExampleRepository
         logger = l;
         context = c;
     }
-    
+
     public int GetSomething()
     {
         return 1;

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-namespace NetAcademy.Repositories.SqlModels;
+﻿namespace NetAcademy.Repositories.SqlModels;
 
 internal class StudentCourse
 {

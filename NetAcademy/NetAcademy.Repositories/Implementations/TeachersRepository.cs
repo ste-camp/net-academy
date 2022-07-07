@@ -1,8 +1,5 @@
-﻿using Dapper;
-using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using NetAcademy.Domain;
 using NetAcademy.Domain.Models.DTOs;
 using NetAcademy.Repositories.Extensions;
 using NetAcademy.Repositories.Interfaces;
@@ -86,8 +83,8 @@ public class TeachersRepository : ITeachersRepository
         return context
             .Teachers
             .Include(t => t.Courses)
-            .Select(x => 
-            new TeacherInfoDto() 
+            .Select(x =>
+            new TeacherInfoDto()
             {
                 TeacherEmail = x.TeacherEmail,
                 TeacherName = x.TeacherName,

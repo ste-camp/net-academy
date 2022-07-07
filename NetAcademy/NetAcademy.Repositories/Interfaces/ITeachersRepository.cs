@@ -9,4 +9,5 @@ public interface ITeachersRepository
     public Task UpdateTeacherAsync(long id, TeacherDto dto);
     public Task<TeacherDto> GetTeacherAsync(long id);
     public List<TeacherDto> GetAllTeachers();
+    public List<TeacherInfoDto> GetTeachersAndCourses();
 }

@@ -7,7 +7,7 @@ internal static class SqlModelExtensions
 {
     public static StudentDto? ToDto(this Student x)
     {
-        if(x == null) return null;
+        if (x == null) return null;
         return new StudentDto()
         {
             StudentId = x.Id,

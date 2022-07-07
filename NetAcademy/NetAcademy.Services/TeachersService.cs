@@ -1,13 +1,12 @@
 ﻿using NetAcademy.Domain.Models.DTOs;
 using NetAcademy.Repositories.Interfaces;
-using NetAcademy.Repository;
 
 namespace NetAcademy.Services;
 
 public class TeachersService
 {
     private ITeachersRepository repository;
-    
+
     public TeachersService(ITeachersRepository repo)
     {
         repository = repo;
@@ -23,11 +22,6 @@ public class TeachersService
         await repository.UpdateTeacherAsync(id, dto);
     }
 
-    public async Task DeleteTeacherAsync(long id)
-    {
-        await repository.DeleteTeacherAsync(id);
-    }
-
     public List<TeacherDto> GetAllTeachers()
     {
         return repository.GetAllTeachers();
@@ -37,4 +31,15 @@ public class TeachersService
     {
         return await repository.GetTeacherAsync(id);
     }
+
+    public async Task DeleteTeacherAsync(long id)
+    {
+        await repository.DeleteTeacherAsync(id);
+    }
+
+    public List<TeacherInfoDto> GetTeachersAndCourses()
+    {
+        return repository.GetTeachersAndCourses();
+    }
+
 }

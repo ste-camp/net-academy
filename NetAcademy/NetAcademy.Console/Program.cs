@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using NetAcademy.Domain;
 using NetAcademy.Domain.Models.DTOs;
 using NetAcademy.Repositories;
 using NetAcademy.Repositories.Implementations;

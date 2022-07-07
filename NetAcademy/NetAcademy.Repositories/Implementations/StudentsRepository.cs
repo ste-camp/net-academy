@@ -1,8 +1,5 @@
-﻿using Dapper;
-using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using NetAcademy.Domain;
 using NetAcademy.Domain.Models.DTOs;
 using NetAcademy.Repositories.Extensions;
 using NetAcademy.Repositories.Interfaces;
@@ -58,6 +55,13 @@ public class StudentsRepository : IStudentsRepository
             .Include(s => s.StudentCourses)
             .ThenInclude(sc => sc.Course)
             .FirstOrDefaultAsync(x => x.Id == id);
+
+        //Student student = await (from s in context.Students
+        //                         join sc in context.StudentsCourses on s.Id equals sc.StudentId
+        //                         join c in context.Courses on sc.CourseId equals c.Id
+        //                         select s)
+        //                   .Include(s => s.StudentCourses)
+        //                   .FirstOrDefaultAsync();
 
         StudentDto dto = student.ToDto();
         StudentInfoDto info = new();
