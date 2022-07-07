@@ -29,7 +29,7 @@ class Program
         var service = collection.BuildServiceProvider();
         var _service = service.GetRequiredService<TeachersService>();
 
-        TeacherDto dto = new() { TeacherName = "Stefano", TeacherSurname = "Campanella", TeacherEmail = "ste.cam@email.com" };
+        TeacherDto dto = new() { TeacherName = "Marcello", TeacherSurname = "Rossi", TeacherEmail = "mar.rossi@email.com" };
 
         await _service.CreateNewTeacherAsync(dto);
         //string json = JsonSerializer.Serialize(res, new JsonSerializerOptions() { WriteIndented = true });

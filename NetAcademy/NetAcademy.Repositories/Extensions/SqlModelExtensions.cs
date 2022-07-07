@@ -42,6 +42,18 @@ internal static class SqlModelExtensions
         };
     }
 
+    public static Teacher? ToSqlModel(this TeacherDto x)
+    {
+        if (x == null) return null;
+        return new Teacher()
+        {
+            Id = x.TeacherId,
+            TeacherEmail = x.TeacherEmail,
+            TeacherName = x.TeacherName,
+            TeacherSurname = x.TeacherSurname,
+        };
+    }
+
     public static StudentCourseDto? ToDto(this StudentCourse x)
     {
         if (x == null) return null;

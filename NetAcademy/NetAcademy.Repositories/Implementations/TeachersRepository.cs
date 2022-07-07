@@ -3,6 +3,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using NetAcademy.Domain;
 using NetAcademy.Domain.Models.DTOs;
+using NetAcademy.Repositories.Extensions;
 using NetAcademy.Repositories.Interfaces;
 
 namespace NetAcademy.Repositories.Implementations;
@@ -20,12 +21,30 @@ public class TeachersRepository : ITeachersRepository
 
     public async Task CreateNewTeacherAsync(TeacherDto dto)
     {
-        // unsecure query
-        var sql = $"insert into Teacher(TeacherName, TeacherSurname, TeacherEmail) values('{dto.TeacherName}', '{dto.TeacherSurname}', '{dto.TeacherEmail}');";
+        //// unsecure query
+        //var sql = $"insert into Teacher(TeacherName, TeacherSurname, TeacherEmail) values('{dto.TeacherName}', '{dto.TeacherSurname}', '{dto.TeacherEmail}');";
 
-        using (var connection = new SqlConnection(Constants.DAPPER_CONNECTION))
-        {
-            var result = await connection.QueryAsync(sql);
-        }
+        //using (var connection = new SqlConnection(Constants.DAPPER_CONNECTION))
+        //{
+        //    var result = await connection.QueryAsync(sql);
+        //}
+
+        //// parameterized operation
+        //var parameters = new
+        //{
+        //    TeacherName = dto.TeacherName,
+        //    TeacherSurname = dto.TeacherSurname,
+        //    TeacherEmail = dto.TeacherEmail
+        //};
+
+        //var sql = $"insert into Teacher(TeacherName, TeacherSurname, TeacherEmail) values(@TeacherName, @TeacherSurname, @TeacherEmail);";
+
+        //using (var connection = new SqlConnection(Constants.DAPPER_CONNECTION))
+        //{
+        //    var result = await connection.QueryAsync(sql, parameters);
+        //}
+
+        await context.Teachers.AddAsync(dto.ToSqlModel());
+        await context.SaveChangesAsync();
     }
 }
